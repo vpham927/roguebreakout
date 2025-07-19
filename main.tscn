@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://30bxogj2ka2c"]
+
+[ext_resource type="Script" uid="uid://dhyjd5yeh18eg" path="res://player_1.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ch1ogimy5wrk4" path="res://player_1.tscn" id="2_0xm2m"]
+
+[sub_resource type="Gradient" id="Gradient_ig7tw"]
+colors = PackedColorArray(0, 0, 0, 1, 0.151276, 0.151276, 0.151276, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0xm2m"]
+gradient = SubResource("Gradient_ig7tw")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Player1" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(998, 963)
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1928.0
+offset_bottom = 1085.0
+texture = SubResource("GradientTexture1D_0xm2m")
